@@ -11,14 +11,14 @@ const Header = () => {
         <header>
                 <div>
                     <img src={Logo}/>
-                    <nav className={show? styles.active : null}>
+                    <nav className={show ? styles.active : null}>
                         <Link to="/" onClick={() => showMenu(false)}>Home</Link>
                         <Link to="/features" onClick={() => showMenu(false)}>Features</Link>
                         <Link to="/download" onClick={() => showMenu(false)}>Download</Link>
                         <Link to="/blog" onClick={() => showMenu(false)}>Blog</Link>
                         <Link to="/contact" onClick={() => showMenu(false)}>Contact</Link>
                     </nav>
-                    <img src={Hamburger} onClick={() => showMenu(false)} className={styles.menu}/>
+                    <img src={Hamburger} onClick={() => showMenu(true)} className={styles.menu}/>
                 </div>
             </header>
     );
