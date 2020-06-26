@@ -1,0 +1,4 @@
+Font used:
+1. Montserrat Bold (Google Font) - Weight 700
+2. Montserrat Regular (Google Font) - Weight 400
+3. HelveticaNeue-Thin (Font Provided)

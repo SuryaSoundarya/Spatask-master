@@ -1,0 +1,17 @@
+@mixin background-image ($src, $size: inherit, $position: initial) {
+    background: $src;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position: $position;
+   
+  }
+
+@mixin flex ($justify :space-between, $align: initial , $dir: row, $alignContent: Initial){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+    align-content: $alignContent;
+}
+

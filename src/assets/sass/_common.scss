@@ -1,0 +1,52 @@
+
+
+html{
+  height: 100%;
+  overflow-y:hidden;
+  font-size: 14px;
+  @media only screen and (max-width: 1000px) {
+    overflow-y: scroll;
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height:100%;
+   > div{
+     height: 100%;
+   }
+}
+
+code {
+  font-family: Montserrat;
+}
+
+.alignCenter{
+  margin: 0 auto;
+  width: 65%;
+  z-index:1;
+
+  @media only screen and (max-width: 1200px) {
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+}
+
+@font-face {
+  font-family: 'HelveticaNeue Thin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/HelveticaNeue-Thin.otf');
+}
+
+
+
+
+.upperCase{
+text-transform: uppercase;
+}

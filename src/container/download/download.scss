@@ -1,0 +1,58 @@
+@import '../../assets/sass/common';
+@import '../../assets/sass/color';
+@import '../../assets/sass/mixin';
+
+.container {
+    @include background-image(url('../../assets/Images/nose-bg.png'), cover);
+    display: flex;
+    align-items: center;
+    color: $white;
+}
+
+.row{
+    @extend .alignCenter;
+    display:flex;
+}
+.column{
+    flex: 0.6;
+    animation: fadeOut 2s ease-in;
+    @media only screen and (max-width: 900px) {
+        flex:1
+    }
+    button{
+        @include background-image(#da4744);
+        border-radius: 40px;
+        border: 1px solid #da4744;
+        padding: 18px;        
+        color: $white;
+        font-weight:bold;
+        font-size: 14px;
+        margin-top: 27px;
+        @extend .upperCase;
+    }
+
+    h2{
+        @extend .upperCase;
+        font-size:50px;
+        @media only screen and (max-width: 900px) {
+            font-size:30px;
+        }
+        span{
+            color:  #da4744;
+        }
+    }
+    .description{
+        font-size: 20px;
+        color: #818181;
+        width: 60%;
+    }
+    @keyframes fadeOut {
+        0% {opacity: 0;}
+        100% {opacity: 1;} 
+     } 
+
+}
+
+
+
+  

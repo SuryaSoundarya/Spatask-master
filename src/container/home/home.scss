@@ -1,0 +1,78 @@
+@import '../../assets/sass/common';
+@import '../../assets/sass/color';
+@import '../../assets/sass/mixin';
+
+.container {
+    @include background-image(url('../../assets/Images/hero-bg.png'), cover);
+    display: flex;
+    align-items: flex-end;
+    color: $white;
+
+    &:after {
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: $light-red;
+    }
+}
+
+.row{
+    @include flex;
+    position: relative;
+    z-index: 2;
+    bottom: 45px;
+}
+.column{
+    flex: inherit;
+    position: relative;
+    width: 100%;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+    @media only screen and (max-width: 992px) {
+       
+        width: initial;
+    }
+    @-webkit-keyframes animatebottom {
+        from { bottom:-50px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+      }
+      @keyframes animatebottom { 
+        from{ bottom:-50px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+      }
+
+    button{
+        @include background-image(url('../../assets/Images/phone-icon.png') black, null, 11%);
+        border-radius: 40px;
+        border: 1px solid $black;
+        padding: 23px;        
+        color: $white;
+        font-size: 14px;
+        padding-left: 76px;
+        margin-top: 27px;
+        @extend .upperCase;
+    }
+
+    h2{
+        @extend .upperCase;
+        font-size:50px;
+    }
+    .description{
+        font-size:32px;
+        font-family: 'HelveticaNeue Thin';
+    }
+
+    img{
+        max-width: 100%;
+        position: absolute;
+        right: 0;
+    }
+}
+
+
+
+  
