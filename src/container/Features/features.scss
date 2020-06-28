@@ -8,6 +8,8 @@
     text-align: center;
     height: 100%;
     margin-top: 10px;
+    top: 75px;
+    position: relative;
     @media only screen and (max-width: 768px) {
         @include flex($justify: flex-start, $dir: column);
     }
@@ -16,18 +18,11 @@
         color: #8B8B8B;
         font-size: 45px;
         text-transform: uppercase;
-        position: relative;
-        animation: item 1s linear;
         
     }
     >.description{
         color: #3A3A3A;
         font-size: 20px;
-        animation: item 1s linear;
-        position: relative;
-        animation-delay:2s;
-        animation-fill-mode: forwards;
-        left: -200%;
     }
 }
 .cardBlock{
@@ -43,8 +38,7 @@
         height: 400px;
         padding: 18px;
         position: relative;
-        animation: item 1s linear;
-        animation-delay: 3s;
+        animation: item 1s ease-in-out;
         animation-fill-mode: forwards;
         left: -200%;
 
@@ -62,11 +56,9 @@
       
     @keyframes item {
         from {left: -100%;
-            transform: rotate(-180deg);
         }
         to {
             left: 0;
-            transform: rotate(0deg);
         }
     }
 }

@@ -2,11 +2,22 @@
 @import '../../assets/sass/color';
 @import '../../assets/sass/mixin';
 
+.main{
+    height: 100%;
+}
+
 .container {
     @include background-image(url('../../assets/Images/hero-bg.png'), cover);
     display: flex;
     align-items: flex-end;
-    color: $white;
+
+    @media screen and (min-height: 800px){
+        align-items: center;
+    }
+    @media screen and (max-width: 768px){
+        align-items: center;
+    }
+
 
     &:after {
         position: absolute;
@@ -21,30 +32,19 @@
 }
 
 .row{
-    @include flex;
-    position: relative;
-    z-index: 2;
-    bottom: 45px;
-}
-.column{
-    flex: inherit;
-    position: relative;
-    width: 100%;
-    animation-name: animatebottom;
-    animation-duration: 2s;
-    @media only screen and (max-width: 992px) {
-       
-        width: initial;
-    }
-    @-webkit-keyframes animatebottom {
-        from { bottom:-50px; opacity:0 } 
-        to { bottom:0px; opacity:1 }
-      }
-      @keyframes animatebottom { 
-        from{ bottom:-50px; opacity:0 } 
-        to{ bottom:0; opacity:1 }
-      }
+    @extend .alignCenter;
+    display: flex;
+    color: white;
+    justify-content: space-between;
 
+    .column{
+        flex: 0.4;
+        @media screen and (max-width:950px){
+            flex: 1;
+        }
+        padding-bottom: 8%;
+         
+    }
     button{
         @include background-image(url('../../assets/Images/phone-icon.png') black, null, 11%);
         border-radius: 40px;
@@ -53,26 +53,88 @@
         color: $white;
         font-size: 14px;
         padding-left: 76px;
-        margin-top: 27px;
+        margin: 20px 0;
         @extend .upperCase;
     }
 
     h2{
         @extend .upperCase;
-        font-size:50px;
+        font-size:38px;
     }
     .description{
-        font-size:32px;
+        font-size: 25px;
         font-family: 'HelveticaNeue Thin';
+        line-height: 1.3;
     }
+    /*.imgPhone{
+        @extend .column;
+        @include background-image(url('../../assets/Images/iphone.png'), cover);
+        height: 0;
+        padding-bottom: 60%;
+        flex: 0.46;
 
-    img{
-        max-width: 100%;
-        position: absolute;
-        right: 0;
+        img{
+            max-width: 100%;
+        }
+    
+    }*/
+    .imgPhone {
+        flex: 0.5;
+        height: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        animation: slidein 1s ease-in-out forwards;
+        position: relative;
+        
+        @keyframes slidein {
+            0% { padding-bottom:0}
+            100% {padding-bottom:60%} 
+         } 
+        @media screen and (min-width:600px) and (max-width:950px){
+            flex: 1;
+            overflow: auto;
+        }
+        @media screen and (max-width:768px){
+            display:none;
+         }
+
+        img{
+            max-width: 100%;
+            position: relative;
+            left: 55px;
+            @media screen and (max-width: 950px){
+                left: 10%;
+               
+            }
+            &.btn{
+                position: absolute;
+                left: auto;
+                left: 70%;
+                @media screen and (max-width:950px){
+                    left: 55;
+                }
+            }
+            &.phoneOn{
+                position: absolute;
+                max-width: 65%;
+                left: 28%;
+                top:100%;
+                animation: fadeIn 1s ease-in-out forwards;
+                animation-delay:1s;
+
+                @media screen and (max-width: 950px){
+                    left: 26%;
+                   
+                }
+               
+
+            }
+            @keyframes fadeIn {
+                0% { top:100%}
+                100% {top:17%} 
+             }
+           
+        
+        }
     }
 }
-
-
-
-  

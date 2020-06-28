@@ -15,7 +15,7 @@ import Header from './components/header';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Header/>
+    <Header/>
       <Switch>
           <Route exact path="/">
             <Home/>

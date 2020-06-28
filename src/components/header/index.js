@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 import styles from './header.scss';
-import Logo from '../../assets/Images/logo.png';
+import Logo from '../../assets/Images/site-logo.png';
 import Hamburger from '../../assets/Images/hamburger.png';
 
 
@@ -12,11 +12,11 @@ const Header = () => {
                 <div>
                     <img src={Logo}/>
                     <nav className={show ? styles.active : null}>
-                        <Link to="/" onClick={() => showMenu(false)}>Home</Link>
-                        <Link to="/features" onClick={() => showMenu(false)}>Features</Link>
-                        <Link to="/download" onClick={() => showMenu(false)}>Download</Link>
-                        <Link to="/blog" onClick={() => showMenu(false)}>Blog</Link>
-                        <Link to="/contact" onClick={() => showMenu(false)}>Contact</Link>
+                        <NavLink to="/" exact activeClassName={styles.active} onClick={() => showMenu(false)}>Home</NavLink>
+                        <NavLink to="/features" activeClassName={styles.active} onClick={() => showMenu(false)}>Features</NavLink>
+                        <NavLink to="/download" activeClassName={styles.active} onClick={() => showMenu(false)}>Download</NavLink>
+                        <NavLink to="/blog" activeClassName={styles.active} onClick={() => showMenu(false)}>Blog</NavLink>
+                        <NavLink to="/contact" activeClassName={styles.active} onClick={() => showMenu(false)}>Contact</NavLink>
                     </nav>
                     <img src={Hamburger} onClick={() => showMenu(true)} className={styles.menu}/>
                 </div>

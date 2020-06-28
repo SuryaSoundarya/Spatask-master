@@ -6,10 +6,11 @@
 header{
     position: fixed;
     width: 100%;
-    background: $transparent-bg;
+    padding: 36px 0;
     z-index: 2;
     top:0; 
     animation: item 4s ease;
+    background: #00000024;
 
     @keyframes item {
         from {opacity:0}
@@ -19,6 +20,9 @@ header{
     div{
         @extend .alignCenter;
         @include flex(space-between, center);
+        img{
+            max-height:40px;
+        }
     }
     nav {
         @media only screen and (max-width: 768px) {
@@ -43,6 +47,10 @@ header{
         @extend .upperCase;
         font-weight:500;
         text-decoration:none;
+        &.active{
+            border-bottom: 3px solid white;
+        }
+            
 
         @media only screen and (max-width: 768px) {
             display:block;
@@ -57,4 +65,5 @@ header{
             display:block;
         }
     }
+    
 }
