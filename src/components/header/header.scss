@@ -10,7 +10,7 @@ header{
     z-index: 2;
     top:0; 
     animation: item 4s ease;
-    background: #00000024;
+    background: $transparent-black;
 
     @keyframes item {
         from {opacity:0}

@@ -16,7 +16,6 @@ const Header = () => {
                         <NavLink to="/features" activeClassName={styles.active} onClick={() => showMenu(false)}>Features</NavLink>
                         <NavLink to="/download" activeClassName={styles.active} onClick={() => showMenu(false)}>Download</NavLink>
                         <NavLink to="/blog" activeClassName={styles.active} onClick={() => showMenu(false)}>Blog</NavLink>
-                        <NavLink to="/contact" activeClassName={styles.active} onClick={() => showMenu(false)}>Contact</NavLink>
                     </nav>
                     <img src={Hamburger} onClick={() => showMenu(true)} className={styles.menu}/>
                 </div>
